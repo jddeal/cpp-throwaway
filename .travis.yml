@@ -8,10 +8,9 @@ compiler:
   - clang
 
 script:
-  - if [ "$TRAVIS_OS_NAME" = "windows" ];   export PATH=C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\:$PATH; fi
   - mkdir build
   - cd build
   - cmake ..
-  - if [ "$TRAVIS_OS_NAME" = "linux" ];     then make;                                       fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ];     then ./tests;                                    fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then devenv.com cpp-throwaway.sln /Build;        fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ];     then make;                                                                                                                   fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ];     then ./tests;                                                                                                                fi
+  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe" cpp-throwaway.sln /Build;        fi
