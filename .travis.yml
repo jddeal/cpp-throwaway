@@ -6,16 +6,9 @@ os:
 compiler:
   - clang
 
-stages:
-  - configure
-  - build
-  - test
-
-jobs:
-  include:
-    - stage: Configure
-      script: mkdir build && cd build && cmake ..
-    - stage: Build
-      script: make
-    - stage: Tests
-      script: ./tests
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - ./tests
