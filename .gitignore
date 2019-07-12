@@ -36,3 +36,6 @@
 
 # build directory
 build/
+
+# 3rd party libs
+libs/
