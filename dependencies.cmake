@@ -1,4 +1,7 @@
-# load the cmake commands we need to use
+# 3rd party dependencies are added to the project here
+# make sure to add a add_dependencies(...) entry to CMakeLists.txt if
+# adding in a new dependency to this file!
+
 include(ExternalProject)
 
 # where we want to install our libraries
