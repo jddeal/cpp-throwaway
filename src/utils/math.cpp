@@ -2,5 +2,5 @@
 
 int math::add(int left, int right)
 {
-    return left + right;
+    return left - right;
 }
