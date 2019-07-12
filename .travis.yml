@@ -13,4 +13,4 @@ script:
   - cmake ..
   - if [ "$TRAVIS_OS_NAME" = "linux" ];     then make;                                                                                                                   fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ];     then ./tests;                                                                                                                fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then tree /f "C:/Program Files (x86)/Microsoft Visual Studio/2017";                                                         fi
+  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then where devenv.exe;                                                                                                       fi
