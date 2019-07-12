@@ -38,12 +38,12 @@ add_executable(tests
     ${TESTED_SOURCES}
     src/utils/math_tests.cpp
 )
+add_dependencies(tests catch)
 
 # main
 add_executable(cpp-throwaway
     src/main.cpp
     ${TESTED_SOURCES}
 )
-add_dependencies(cpp-throwaway catch)
 add_dependencies(cpp-throwaway tests)
 
