@@ -25,18 +25,12 @@ include_directories(
 )
 
 link_directories(
-    ${ROOT_DIR}/build
+    ${PROJECT_SOURCE_DIR}/build
 )
 
 # common source files - things that get tested basically
 set(TESTED_SOURCES
     src/utils/math.cpp)
-
-# main
-add_executable(cpp-throwaway
-    src/main.cpp
-    ${TESTED_SOURCES}
-)
 
 # tests
 add_executable(tests
@@ -44,3 +38,12 @@ add_executable(tests
     ${TESTED_SOURCES}
     src/utils/math_tests.cpp
 )
+add_dependencies(tests catch)
+
+# main
+add_executable(cpp-throwaway
+    src/main.cpp
+    ${TESTED_SOURCES}
+)
+add_dependencies(cpp-throwaway tests)
+
