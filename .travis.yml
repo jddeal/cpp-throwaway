@@ -14,4 +14,4 @@ script:
   - if [ "$TRAVIS_OS_NAME" = "linux" ];     then make;                                                                                                                   fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ];     then ./tests;                                                                                                                fi
   - if [ "$TRAVIS_OS_NAME" = "windows" ];   then cmake --build . --target ALL_BUILD --config Release;                                                                    fi
-  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then .\\Release\\tests.exe                                                                                                     fi
+  - if [ "$TRAVIS_OS_NAME" = "windows" ];   then .\\Release\\tests.exe;                                                                                                  fi
