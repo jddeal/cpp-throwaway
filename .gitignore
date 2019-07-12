@@ -39,3 +39,5 @@ build/
 
 # 3rd party libs
 libs/
+
+.vs/
